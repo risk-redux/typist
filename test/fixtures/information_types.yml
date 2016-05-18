@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_code: MyString
+  name: MyString
+  confidentiality_impact_level: 1
+  integrity_impact_level: 1
+  availability_impact_level: 1
+  confidentiality_impact_description: MyText
+  integrity_impact_description: MyText
+  availability_impact_description: MyText
+  information_group_id: 1
+
+two:
+  type_code: MyString
+  name: MyString
+  confidentiality_impact_level: 1
+  integrity_impact_level: 1
+  availability_impact_level: 1
+  confidentiality_impact_description: MyText
+  integrity_impact_description: MyText
+  availability_impact_description: MyText
+  information_group_id: 1

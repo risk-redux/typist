@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  impact_level: 1
+  name: MyString
+  description: MyText
+
+two:
+  impact_level: 1
+  name: MyString
+  description: MyText

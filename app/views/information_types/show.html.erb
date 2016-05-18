@@ -1,0 +1,10 @@
+<%- view_title "Information type |  #{@information_type.type_code} - #{@information_type.name}" %>
+
+<% content_for :main do %>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h1 class="page-header"><%= "#{@information_type.type_code} - #{@information_type.name}" %></h1>
+    <p class="lead"><%= @information_type.description %></p>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,29 @@
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Confidentiality</th>
+      <th>Integrity</th>
+      <th>Availability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% information_types.each do |information_type| %>
+    <tr>
+      <td><%= link_to("#{information_type.type_code}", information_type_path(information_type.id)) %></td>
+      <td><%= link_to("#{information_type.name}", information_type_path(information_type.id)) %></td>
+      <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+        <%= impact_level_label(information_type.confidentiality_impact_level) %>
+      </td>
+      <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+        <%= impact_level_label(information_type.integrity_impact_level) %>
+      </td>
+      <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1 text-center">
+        <%= impact_level_label(information_type.availability_impact_level) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>
