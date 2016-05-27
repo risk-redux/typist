@@ -1,7 +1,6 @@
 class WelcomeController < ApplicationController
-  layout "jumbotron"
-
   def index
-    # Hi!
+    @hits = InformationType.search(params[:search])
+    @search = params[:search]
   end
 end

@@ -1,0 +1,12 @@
+<div class="panel <%= panel_class %>">
+  <div class="panel-heading">
+    <h3 class="panel-title">Security category</h3>
+  </div>
+  <div class="panel-body">
+    <strong><%= "%s - %s" % [information_type.type_code, information_type.name] %></strong> = <em>
+      {(confidentiality, <%= impact_level_text(information_type.confidentiality_impact_level) %>),
+      (integrity, <%= impact_level_text(information_type.integrity_impact_level) %>),
+      (availability, <%= impact_level_text(information_type.availability_impact_level) %>)}
+    </em>
+  </div>
+</div>

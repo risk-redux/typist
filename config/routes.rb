@@ -7,10 +7,9 @@ Rails.application.routes.draw do
   get 'information_types/:id', to: 'information_types#show', as: :information_type
 
   get 'about', to: 'about#index', as: :about
-  get 'about/index'
 
   root to: 'welcome#index'
-  get 'welcome/index'
+  get 'welcome', to: 'welcome#index', as: :welcome
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

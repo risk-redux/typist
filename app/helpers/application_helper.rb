@@ -13,20 +13,20 @@ module ApplicationHelper
     render("shared/information_type_table", information_types: information_types)
   end
 
-  def impact_level_label(impact_level)
-    @impact_level = ImpactLevel.find(impact_level)
+  def impact_level_text(impact_level)
+    impact_level = ImpactLevel.where(impact_level: impact_level).first
 
-    case impact_level
+    case impact_level.impact_level
     when 1
-      @impact_level_color = "info"
+      impact_level_color = "info"
     when 2
-      @impact_level_color = "warning"
+      impact_level_color = "warning"
     when 3
-      @impact_level_color = "danger"
+      impact_level_color = "danger"
     else
-      @impact_level_color = "default"
+      impact_level_color = "default"
     end
 
-    render("shared/impact_level_label", impact_level: @impact_level, impact_level_color: @impact_level_color)
+    render("shared/impact_level_text", impact_level: impact_level, impact_level_color: impact_level_color)
   end
 end
