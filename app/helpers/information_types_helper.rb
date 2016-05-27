@@ -31,7 +31,7 @@ module InformationTypesHelper
       label_text = "High"
       label_class = "label-danger"
     when 2
-      label_text = "Medium"
+      label_text = "Moderate"
       label_class = "label-warning"
     when 1
       label_text = "Low"
