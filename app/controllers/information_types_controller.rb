@@ -1,6 +1,6 @@
 class InformationTypesController < ApplicationController
   def index
-    # Hi!
+    @information_types = InformationType.all
   end
 
   def show
