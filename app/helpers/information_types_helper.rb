@@ -43,4 +43,8 @@ module InformationTypesHelper
 
     render("information_types/shared/impact_level_label", label_text: label_text, label_class: label_class)
   end
+
+  def security_category_line(information_type)
+    render("information_types/shared/security_category_line", information_type: information_type)
+  end
 end
