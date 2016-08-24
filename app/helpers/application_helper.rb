@@ -27,6 +27,12 @@ module ApplicationHelper
       impact_level_color = "default"
     end
 
-    render("shared/impact_level_text", impact_level: impact_level, impact_level_color: impact_level_color)
+    impact_level_text = "<strong class='text-%s'>%s</strong>" %
+    [impact_level_color, impact_level.name.capitalize]
+
+    return impact_level_text.html_safe
+
+    # Took this out and went with the string above because it was adding inexplicable whitespace. Ugh!
+    #render("shared/impact_level_text", impact_level: impact_level, impact_level_color: impact_level_color)
   end
 end

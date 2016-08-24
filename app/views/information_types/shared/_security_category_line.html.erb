@@ -1,6 +1,6 @@
 <strong><%= "#{information_type.type_code} - #{information_type.name}" %></strong> =
 <em>
-  {( confidentiality, <%= impact_level_text(information_type.confidentiality_impact_level) %>),
-   ( integrity, <%= impact_level_text(information_type.integrity_impact_level) %>),
-   ( availability, <%= impact_level_text(information_type.availability_impact_level) %>)}
+  {(confidentiality, <%= impact_level_text(information_type.confidentiality_impact_level) %>),
+  (integrity, <%= impact_level_text(information_type.integrity_impact_level) %>),
+  (availability, <%= impact_level_text(information_type.availability_impact_level) %>)}
 </em>
