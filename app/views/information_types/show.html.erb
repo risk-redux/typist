@@ -3,29 +3,34 @@
 <% content_for :main do %>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h1 class="page-header"><%= "#{@information_type.type_code} - #{@information_type.name}" %></h1>
-    <h2>Description</h2>
+    <h1 class="page-header">
+      <%= "#{@information_type.type_code} - #{@information_type.name}" %>
+    </h1>
+    
     <%= description_text(@information_type) %>
 
-    <%= security_category_panel(@information_type) %>
+    <h2>Security category</h2>
+    <%= security_category_card(@information_type) %>
 
-    <h3>Confidentiality
-      <small><%= impact_level_label(@information_type.confidentiality_impact_level) %></small>
-    </h3>
+    <hr/>
+
+    <h2>Confidentiality
+      <%= impact_level_badge(@information_type.confidentiality_impact_level) %>
+    </h2>
     <p>
       <%= @information_type.confidentiality_impact_description %>
     </p>
 
-    <h3>Integrity
-      <small><%= impact_level_label(@information_type.integrity_impact_level) %></small>
-    </h3>
+    <h2>Integrity
+      <%= impact_level_badge(@information_type.integrity_impact_level) %>
+    </h2>
     <p>
       <%= @information_type.integrity_impact_description %>
     </p>
 
-    <h3>Availability
-      <small><%= impact_level_label(@information_type.availability_impact_level) %></small>
-    </h3>
+    <h2>Availability
+      <%= impact_level_badge(@information_type.availability_impact_level) %>
+    </h2>
     <p>
       <%= @information_type.availability_impact_description %>
     </p>

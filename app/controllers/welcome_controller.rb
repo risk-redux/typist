@@ -3,4 +3,7 @@ class WelcomeController < ApplicationController
     @hits = InformationType.search(params[:search])
     @search = params[:search]
   end
+
+  def about
+  end
 end

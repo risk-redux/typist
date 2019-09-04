@@ -1,28 +1,28 @@
 <table class="table table-condensed table-hover">
   <thead>
     <tr>
-      <th rowspan="2">Code</th>
-      <th rowspan="2">Name</th>
-      <th colspan="3">Impact levels</th>
+      <th scope="col" rowspan="2">Code</th>
+      <th scope="col" rowspan="2">Name</th>
+      <th scope="col" colspan="3">Impact levels</th>
     </tr>
     <tr>
-      <th>Confidentiality</th>
-      <th>Integrity</th>
-      <th>Availability</th>
+      <th scope="col">Confidentiality</th>
+      <th scope="col">Integrity</th>
+      <th scope="col">Availability</th>
     </tr>
   </thead>
   <tbody>
     <% information_types.each do |information_type| %>
     <tr>
-      <td><%= link_to("#{information_type.type_code}", information_type_path(information_type.id)) %></td>
+      <td scope="row"><%= link_to("#{information_type.type_code}", information_type_path(information_type.id)) %></td>
       <td><%= information_type.name %></td>
-      <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <td class="text-center">
         <%= impact_level_text(information_type.confidentiality_impact_level) %>
       </td>
-      <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <td class="text-center">
         <%= impact_level_text(information_type.integrity_impact_level) %>
       </td>
-      <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <td class="text-center">
         <%= impact_level_text(information_type.availability_impact_level) %>
       </td>
     </tr>
