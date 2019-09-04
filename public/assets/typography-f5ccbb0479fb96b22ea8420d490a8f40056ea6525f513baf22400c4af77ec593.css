@@ -1,0 +1,45 @@
+/* line 1, lib/assets/stylesheets/typography.css.scss */
+h1.anchor, h2.anchor, h3.anchor, h4.anchor {
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+/* line 6, lib/assets/stylesheets/typography.css.scss */
+p {
+  text-align: justify;
+}
+
+/* line 10, lib/assets/stylesheets/typography.css.scss */
+.navbar-brand {
+  font-family: 'Righteous', cursive;
+  font-size: 2.50em;
+  font-weight: bold;
+}
+
+/* line 16, lib/assets/stylesheets/typography.css.scss */
+.fancy {
+  font-family: 'Righteous', cursive;
+}
+
+/* line 20, lib/assets/stylesheets/typography.css.scss */
+.giant {
+  font-size: 3.00em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+}
+
+/* line 27, lib/assets/stylesheets/typography.css.scss */
+.popover div.small {
+  word-break: break-all;
+}
+
+/* line 31, lib/assets/stylesheets/typography.css.scss */
+.popover > .arrow {
+  visibility: hidden;
+}
+
+/* line 35, lib/assets/stylesheets/typography.css.scss */
+th, td {
+  font-family: "Share Tech Mono";
+}

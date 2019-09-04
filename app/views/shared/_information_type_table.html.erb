@@ -1,4 +1,4 @@
-<table class="table table-condensed table-hover">
+<table id="information_type_table" class="table table-sm table-hover">
   <thead>
     <tr>
       <th scope="col" rowspan="2">Code</th>
@@ -13,8 +13,8 @@
   </thead>
   <tbody>
     <% information_types.each do |information_type| %>
-    <tr>
-      <td scope="row"><%= link_to("#{information_type.type_code}", information_type_path(information_type.id)) %></td>
+    <tr data-link="<%= information_type_path(information_type.id) %>">
+      <td scope="row"><%= information_type.type_code %></td>
       <td><%= information_type.name %></td>
       <td class="text-center">
         <%= impact_level_text(information_type.confidentiality_impact_level) %>
