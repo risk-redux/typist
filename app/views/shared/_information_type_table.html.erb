@@ -14,7 +14,11 @@
   <tbody>
     <% information_types.each do |information_type| %>
     <tr data-link="<%= information_type_path(information_type.id) %>">
-      <td scope="row"><%= information_type.type_code %></td>
+      <td scope="row">
+        <%= link_to information_type_path(information_type.id) do %>
+        <%= information_type.type_code %>
+        <% end %>
+      </td>
       <td><%= information_type.name %></td>
       <td class="text-center">
         <%= impact_level_text(information_type.confidentiality_impact_level) %>

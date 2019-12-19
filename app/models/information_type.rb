@@ -1,6 +1,6 @@
 class InformationType < ActiveRecord::Base
-  belongs_to :information_group
-  belongs_to :information_class
+  belongs_to :information_group, optional: true
+  belongs_to :information_class, optional: true
 
   def self.search(search)
     @hits = []
