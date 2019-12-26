@@ -15,7 +15,7 @@
     <% information_types.each do |information_type| %>
     <tr data-link="<%= information_type_path(information_type.id) %>">
       <td scope="row">
-        <%= link_to information_type_path(information_type.id) do %>
+        <%= link_to information_type_path(information_type.type_code) do %>
         <%= information_type.type_code %>
         <% end %>
       </td>
