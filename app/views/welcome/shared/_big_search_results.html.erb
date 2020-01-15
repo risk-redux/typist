@@ -4,7 +4,7 @@
 <ul class='list-unstyled'>
   <% @hits.each do |hit| %>
     <li>
-      <%= link_to(information_type_path(hit.id)) do %>
+      <%= link_to(information_type_path(hit.type_code)) do %>
         <h2><%= hit.type_code %> <small><%= hit.name %></small></h2>
       <% end %>
       <div>
