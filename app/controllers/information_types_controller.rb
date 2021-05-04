@@ -4,7 +4,7 @@ class InformationTypesController < ApplicationController
 
     respond_to do |format|
       format.html {}
-      format.json { render json: @information_types.as_json(except: [:id, :information_group_id, :created_at, :updated_at]) }
+      format.json { render json: JSON.pretty_generate(@information_types.as_json(except: [:id, :information_group_id, :created_at, :updated_at])) }
     end
   end
 
@@ -13,7 +13,7 @@ class InformationTypesController < ApplicationController
 
     respond_to do |format|
       format.html {}
-      format.json { render json: @information_type.as_json(except: [:id, :information_group_id, :created_at, :updated_at]) }
+      format.json { render json: JSON.pretty_generate(@information_type.as_json(except: [:id, :information_group_id, :created_at, :updated_at])) }
     end
   end
 end

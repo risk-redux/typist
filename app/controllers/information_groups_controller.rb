@@ -5,10 +5,10 @@ class InformationGroupsController < ApplicationController
     respond_to do |format|
       format.html {}
       format.json {
-        render json: @information_group.as_json(except: [:id, :information_class_id, :created_at, :updated_at],
+        render json: JSON.pretty_generate(@information_group.as_json(except: [:id, :information_class_id, :created_at, :updated_at],
         include: [
           information_types: { except: [:id, :information_group_id, :created_at, :updated_at] }
-        ])
+        ]))
       }
     end
   end
