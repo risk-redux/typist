@@ -1,9 +1,9 @@
 module InformationTypesHelper
   def description_text(information_type)
-    raw = information_type.description.split(".")
+    raw = information_type.description.split(". ")
 
     lead = "%s." % [raw[0]]
-    rest = "%s" % [raw[1..raw.length].join(".")]
+    rest = "%s" % [raw[1..raw.length].join(". ")]
 
     render("information_types/shared/description_text", lead: lead, rest: rest)
   end
