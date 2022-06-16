@@ -1,3 +1,5 @@
+import { Controller } from "@hotwired/stimulus"
+
 const searchSub = function() {
   $("#welcome").hide(1000);
   const url = "/welcome";
@@ -10,7 +12,7 @@ const liveSearch = function() {
   let timer = 0;
   return $("#big-search-field").bind("keyup", function() {
     clearTimeout(timer);
-    return timer = setTimeout(searchSub, 200);
+    return timer = setTimeout(searchSub, 500);
   });
 };
 
