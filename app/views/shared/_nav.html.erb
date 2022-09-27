@@ -13,10 +13,6 @@
       
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto text-right">
-          <li class="nav-item <%= is_active?('about#index')%>">
-            <%= link_to("About", about_path(), { class: "nav-link" }) %>
-          </li>
-          <div class="dropdown-divider"></div>
           <li class="nav-item <%= is_active?('information_classes#index') %>">
             <%= link_to("Information classes", information_classes_path(), { class: "nav-link" }) %>
           </li>
