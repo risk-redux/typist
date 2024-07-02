@@ -17,7 +17,7 @@
         <p class="card-text"><%= information_class.description %></p>
       </div>
       <ul class="list-group list-group-flush">
-        <% information_class.information_groups.each do |information_group| %>
+        <% information_class.information_groups.order(:id).each do |information_group| %>
         <li class="list-group-item">
           <%= link_to("#{information_group.group_code} - #{information_group.name}", information_group_path(information_group.group_code)) %>
         </li>
