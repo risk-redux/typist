@@ -3,7 +3,7 @@
 <% content_for :main do %>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <h1 class="page-header"><%= "#{@information_group.group_code} - #{@information_group.name}" %></h1>
+    <h1 class="page-header"><%= "#{ @information_group.group_code } - #{ @information_group.name.titlecase }" %></h1>
     <p class="lead"><%= @information_group.description %></p>
 
     <h2>Information types</h2>

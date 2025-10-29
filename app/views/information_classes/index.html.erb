@@ -10,7 +10,7 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">
-          <%= "#{information_class.class_code} - #{information_class.name}" %>
+          <%= "#{ information_class.class_code } - #{ information_class.name.titlecase }" %>
         </h3>
       </div>
       <div class="card-body">
@@ -19,7 +19,7 @@
       <ul class="list-group list-group-flush">
         <% information_class.information_groups.order(:id).each do |information_group| %>
         <li class="list-group-item">
-          <%= link_to("#{information_group.group_code} - #{information_group.name}", information_group_path(information_group.group_code)) %>
+          <%= link_to("#{ information_group.group_code } - #{ information_group.name.titlecase }", information_group_path(information_group.group_code)) %>
         </li>
         <% end %>
       </ul>

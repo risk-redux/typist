@@ -1,14 +1,16 @@
 <% if @hits.length == 0 && (@search.to_s != '') %>
+
 <h2 class='text-center'>No matches found.</h2>
+
 <% else %>
 <ul class='list-unstyled'>
   <% @hits.each do |hit| %>
     <li>
       <%= link_to(information_type_path(hit.type_code)) do %>
-        <h2><%= hit.type_code %> <small><%= hit.name %></small></h2>
+        <h2><span class="fixed-width"><%= hit.type_code %></span> <small><%= hit.name.titlecase %></small></h2>
       <% end %>
       <div>
-        <strong><%= "%s - %s" % [hit.type_code, hit.name] %></strong> = <em>
+        <strong class="fixed-width"><%= "%s - %s" % [hit.type_code, hit.name] %></strong> = <em>
           {(confidentiality, <%= impact_level_text(hit.confidentiality_impact_level) %>),
           (integrity, <%= impact_level_text(hit.integrity_impact_level) %>),
           (availability, <%= impact_level_text(hit.availability_impact_level) %>)}
