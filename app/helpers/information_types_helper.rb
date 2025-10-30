@@ -29,16 +29,16 @@ module InformationTypesHelper
     case impact_level
     when 3
       badge_text = "High"
-      badge_class = "badge-danger"
+      badge_class = "text-bg-danger"
     when 2
       badge_text = "Moderate"
-      badge_class = "badge-warning"
+      badge_class = "text-bg-warning"
     when 1
       badge_text = "Low"
-      badge_class = "badge-info"
+      badge_class = "text-bg-info"
     else
       badge_text = "Null"
-      badge_class = "badge-default"
+      badge_class = "text-bg-default"
     end
 
     render("information_types/shared/impact_level_badge", badge_text: badge_text, badge_class: badge_class)
